@@ -1,6 +1,18 @@
 import { getDictionary } from '@/i18n/get-dictionary';
 import { type Locale } from '@/i18n/config';
 import { generatePageMetadata } from '@/lib/metadata';
+import { Hero } from '@/components/sections/Hero';
+import { ValuesGrid } from '@/components/sections/ValuesGrid';
+import { ServiceGrid } from '@/components/sections/ServiceGrid';
+import { CaseStudiesShowcase } from '@/components/sections/CaseStudiesShowcase';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { PartnersStrip } from '@/components/sections/PartnersStrip';
+import { CTASection } from '@/components/sections/CTASection';
+import { values } from '@/data/values';
+import { services } from '@/data/services';
+import { caseStudies } from '@/data/case-studies';
+import { partners } from '@/data/partners';
+import { testimonials } from '@/data/testimonials';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -17,34 +29,64 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
+  // Map testimonials to current locale
+  const localizedTestimonials = testimonials.map((t) => ({
+    id: t.id,
+    quote: locale === 'ar' ? t.quoteAr : t.quote,
+    author: t.author,
+    role: locale === 'ar' ? t.roleAr : t.role,
+    company: t.company,
+  }));
+
   return (
-    <div className="flex min-h-screen flex-col">
-      {/* Hero Section Placeholder */}
-      <section className="flex flex-1 flex-col items-center justify-center px-6 py-20 text-center">
-        <p className="text-primary mb-4 text-sm font-semibold tracking-wider uppercase">
-          {dict.home.hero.eyebrow}
-        </p>
-        <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          {dict.home.hero.title}
-        </h1>
-        <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg">
-          {dict.home.hero.subtitle}
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={`/${locale}/contact`}
-            className="bg-primary hover:bg-primary/90 rounded-full px-8 py-3 text-sm font-semibold text-white transition-colors"
-          >
-            {dict.home.hero.cta}
-          </a>
-          <a
-            href={`/${locale}/case-studies`}
-            className="border-border hover:bg-muted rounded-full border px-8 py-3 text-sm font-semibold transition-colors"
-          >
-            {dict.home.hero.ctaSecondary}
-          </a>
-        </div>
-      </section>
+    <div className="flex flex-col">
+      <Hero
+        eyebrow={dict.home.hero.eyebrow}
+        title={dict.home.hero.title}
+        subtitle={dict.home.hero.subtitle}
+        cta={dict.home.hero.cta}
+        ctaSecondary={dict.home.hero.ctaSecondary}
+      />
+
+      <ValuesGrid
+        eyebrow={dict.home.values.eyebrow}
+        title={dict.home.values.title}
+        subtitle={dict.home.values.subtitle}
+        items={dict.home.values.items}
+        values={values}
+      />
+
+      <ServiceGrid
+        eyebrow={dict.home.services.eyebrow}
+        title={dict.home.services.title}
+        subtitle={dict.home.services.subtitle}
+        items={dict.services.items}
+        services={services}
+      />
+
+      <CaseStudiesShowcase
+        eyebrow={dict.home.caseStudies.eyebrow}
+        title={dict.home.caseStudies.title}
+        subtitle={dict.home.caseStudies.subtitle}
+        filterAll={dict.caseStudies.filterAll}
+        items={dict.caseStudies.items}
+        caseStudies={caseStudies}
+      />
+
+      <TestimonialsSection
+        eyebrow={dict.home.testimonials.eyebrow}
+        title={dict.home.testimonials.title}
+        subtitle={dict.home.testimonials.subtitle}
+        testimonials={localizedTestimonials}
+      />
+
+      <PartnersStrip title={dict.home.partners.title} partners={partners} />
+
+      <CTASection
+        title={dict.home.ctaSection.title}
+        subtitle={dict.home.ctaSection.subtitle}
+        ctaText={dict.common.cta.getStarted}
+      />
     </div>
   );
 }

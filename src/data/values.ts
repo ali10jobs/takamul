@@ -1,9 +1,8 @@
-import { Lightbulb, Award, Handshake, TrendingUp } from 'lucide-react';
 import type { Value } from '@/types/value';
 
 export const values: Value[] = [
-  { id: 'innovation', icon: Lightbulb },
-  { id: 'excellence', icon: Award },
-  { id: 'partnership', icon: Handshake },
-  { id: 'results', icon: TrendingUp },
+  { id: 'innovation', iconName: 'Lightbulb' },
+  { id: 'excellence', iconName: 'Award' },
+  { id: 'partnership', iconName: 'Handshake' },
+  { id: 'results', iconName: 'TrendingUp' },
 ];

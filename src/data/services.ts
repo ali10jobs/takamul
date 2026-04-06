@@ -1,46 +1,45 @@
-import { Globe, Smartphone, Cloud, BrainCircuit, LineChart, Palette } from 'lucide-react';
 import type { Service } from '@/types/service';
 
 export const services: Service[] = [
   {
     id: 'web-development',
     slug: 'web-development',
-    icon: Globe,
+    iconName: 'Globe',
     image: '/images/services/web-development.jpg',
     tags: ['frontend', 'backend', 'fullstack'],
   },
   {
     id: 'mobile-development',
     slug: 'mobile-development',
-    icon: Smartphone,
+    iconName: 'Smartphone',
     image: '/images/services/mobile-development.jpg',
     tags: ['ios', 'android', 'cross-platform'],
   },
   {
     id: 'cloud-solutions',
     slug: 'cloud-solutions',
-    icon: Cloud,
+    iconName: 'Cloud',
     image: '/images/services/cloud-solutions.jpg',
     tags: ['aws', 'azure', 'gcp', 'infrastructure'],
   },
   {
     id: 'ai-ml',
     slug: 'ai-ml',
-    icon: BrainCircuit,
+    iconName: 'BrainCircuit',
     image: '/images/services/ai-ml.jpg',
     tags: ['ai', 'machine-learning', 'automation'],
   },
   {
     id: 'digital-strategy',
     slug: 'digital-strategy',
-    icon: LineChart,
+    iconName: 'LineChart',
     image: '/images/services/digital-strategy.jpg',
     tags: ['strategy', 'consulting', 'transformation'],
   },
   {
     id: 'ui-ux-design',
     slug: 'ui-ux-design',
-    icon: Palette,
+    iconName: 'Palette',
     image: '/images/services/ui-ux-design.jpg',
     tags: ['design', 'ux', 'ui', 'research'],
   },
