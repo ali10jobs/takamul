@@ -239,7 +239,24 @@
       "subtitle": "Thoughts, insights, and best practices from our team of digital experts."
     },
     "readTime": "min read",
-    "publishedOn": "Published on"
+    "publishedOn": "Published on",
+    "items": {
+      "future-of-web-development": {
+        "title": "The Future of Web Development in 2025",
+        "excerpt": "Exploring the trends, frameworks, and paradigms shaping the next generation of web applications.",
+        "content": "The web development landscape continues to evolve at a rapid pace. From server components to edge computing, the way we build web applications is fundamentally changing. In this article, we explore the key trends that will define web development in 2025 and beyond."
+      },
+      "digital-transformation-guide": {
+        "title": "A Comprehensive Guide to Digital Transformation",
+        "excerpt": "How organizations can successfully navigate the journey from legacy systems to modern digital infrastructure.",
+        "content": "Digital transformation is more than just adopting new technology — it's about fundamentally rethinking how your organization delivers value. This guide walks you through the key stages, common pitfalls, and proven strategies for a successful digital transformation journey."
+      },
+      "cloud-migration-best-practices": {
+        "title": "Cloud Migration Best Practices for Enterprise",
+        "excerpt": "Lessons learned from migrating enterprise workloads to the cloud, including architecture patterns and cost optimization.",
+        "content": "Migrating enterprise workloads to the cloud requires careful planning, the right architecture patterns, and a clear understanding of cost implications. Drawing from our experience with dozens of enterprise migrations, we share the best practices that consistently lead to successful outcomes."
+      }
+    }
   },
   "notFound": {
     "title": "Page Not Found",

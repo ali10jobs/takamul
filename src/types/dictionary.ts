@@ -196,6 +196,14 @@ export interface Dictionary {
     };
     readTime: string;
     publishedOn: string;
+    items: Record<
+      string,
+      {
+        title: string;
+        excerpt: string;
+        content: string;
+      }
+    >;
   };
   notFound: {
     title: string;
