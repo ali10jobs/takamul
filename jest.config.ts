@@ -17,7 +17,13 @@ const config: Config = {
     '\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__tests__/__mocks__/fileMock.ts',
   },
   setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/e2e/'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/e2e/',
+    '__tests__/setup\\.ts$',
+    '__tests__/__mocks__/',
+  ],
   collectCoverageFrom: [
     'src/lib/**/*.{ts,tsx}',
     'src/store/**/*.{ts,tsx}',
