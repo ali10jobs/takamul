@@ -4,6 +4,10 @@ import { inter, ibmPlexArabic } from '@/lib/fonts';
 import { locales, localeMetadata, isValidLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/get-dictionary';
 import { cn } from '@/lib/utils';
+import { StoreProvider } from '@/store/provider';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { CookieConsent } from '@/components/shared/CookieConsent';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -92,11 +96,18 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-background text-foreground min-h-full">
-        {/* Skip link for accessibility */}
-        <a href="#main-content" className="skip-link">
-          {locale === 'ar' ? 'تخطي إلى المحتوى الرئيسي' : 'Skip to main content'}
-        </a>
-        <main id="main-content">{children}</main>
+        <StoreProvider>
+          {/* Skip link for accessibility */}
+          <a href="#main-content" className="skip-link">
+            {locale === 'ar' ? 'تخطي إلى المحتوى الرئيسي' : 'Skip to main content'}
+          </a>
+          <Header dictionary={dictionary.common} />
+          <main id="main-content" className="pt-16 lg:pt-20">
+            {children}
+          </main>
+          <Footer dictionary={dictionary.common} />
+          <CookieConsent dictionary={dictionary.common.cookie} />
+        </StoreProvider>
       </body>
     </html>
   );
