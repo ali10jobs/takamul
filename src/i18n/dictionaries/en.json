@@ -1,0 +1,254 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "caseStudies": "Case Studies",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "footer": {
+      "description": "Takamul Smart Technology — Your trusted partner for digital transformation, delivering innovative solutions that drive business growth.",
+      "quickLinks": "Quick Links",
+      "contactUs": "Contact Us",
+      "followUs": "Follow Us",
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "cta": {
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us",
+      "viewProject": "View Project",
+      "readMore": "Read More",
+      "sendMessage": "Send Message",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "language": {
+      "switchTo": "العربية",
+      "current": "English"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "cookie": {
+      "message": "We use cookies to improve your experience. By continuing to visit this site you agree to our use of cookies.",
+      "accept": "Accept",
+      "decline": "Decline"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Digital Transformation Agency",
+      "title": "Transform Your Business with Smart Technology",
+      "subtitle": "We deliver cutting-edge digital solutions that accelerate growth, streamline operations, and create lasting competitive advantages for enterprises across the region.",
+      "cta": "Start Your Journey",
+      "ctaSecondary": "View Our Work"
+    },
+    "values": {
+      "eyebrow": "Why Takamul",
+      "title": "Our Core Values",
+      "subtitle": "The principles that guide every project we deliver.",
+      "items": {
+        "innovation": {
+          "title": "Innovation First",
+          "description": "We leverage the latest technologies and methodologies to deliver solutions that keep you ahead of the curve."
+        },
+        "excellence": {
+          "title": "Technical Excellence",
+          "description": "Every line of code, every design decision is held to the highest standards of quality and performance."
+        },
+        "partnership": {
+          "title": "True Partnership",
+          "description": "We embed ourselves in your team, understanding your business deeply to deliver solutions that truly fit."
+        },
+        "results": {
+          "title": "Results Driven",
+          "description": "Our success is measured by your growth. We focus on delivering measurable business outcomes."
+        }
+      }
+    },
+    "services": {
+      "eyebrow": "What We Do",
+      "title": "Our Services",
+      "subtitle": "Comprehensive digital solutions tailored to your business needs."
+    },
+    "caseStudies": {
+      "eyebrow": "Our Work",
+      "title": "Case Studies",
+      "subtitle": "Explore how we've helped businesses transform and grow."
+    },
+    "testimonials": {
+      "eyebrow": "Client Stories",
+      "title": "What Our Clients Say",
+      "subtitle": "Trusted by leading organizations across the region."
+    },
+    "partners": {
+      "title": "Trusted Technology Partners"
+    },
+    "ctaSection": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how Takamul can help you achieve your digital transformation goals."
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About Takamul",
+      "title": "Pioneering Digital Excellence",
+      "subtitle": "Since our founding, we've been committed to helping businesses across the region embrace the power of technology."
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Takamul Smart Technology was founded with a clear vision: to bridge the gap between cutting-edge technology and real business value. Our team of experts combines deep technical knowledge with strategic business insight to deliver solutions that make a measurable difference."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower organizations with smart technology solutions that drive sustainable growth, operational efficiency, and competitive advantage in an increasingly digital world."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the leading digital transformation partner in the region, known for innovation, excellence, and delivering transformative results for our clients."
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "A diverse team of engineers, designers, and strategists united by a passion for technology."
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Our Expertise",
+      "title": "Services We Offer",
+      "subtitle": "End-to-end digital solutions designed to transform your business operations and customer experiences."
+    },
+    "items": {
+      "web-development": {
+        "title": "Web Development",
+        "excerpt": "Modern, performant web applications built with cutting-edge frameworks.",
+        "description": "We build fast, scalable, and beautiful web applications using Next.js, React, and modern frontend technologies. From corporate websites to complex SaaS platforms, we deliver solutions that perform."
+      },
+      "mobile-development": {
+        "title": "Mobile Development",
+        "excerpt": "Native and cross-platform mobile apps that users love.",
+        "description": "Our mobile development team creates seamless experiences across iOS and Android using React Native and Flutter. We focus on performance, usability, and delightful interactions."
+      },
+      "cloud-solutions": {
+        "title": "Cloud Solutions",
+        "excerpt": "Scalable cloud infrastructure designed for growth.",
+        "description": "We architect and implement cloud solutions on AWS, Azure, and GCP that are secure, cost-effective, and built to scale with your business. From migration to optimization, we've got you covered."
+      },
+      "ai-ml": {
+        "title": "AI & Machine Learning",
+        "excerpt": "Intelligent systems that automate and predict.",
+        "description": "Harness the power of artificial intelligence and machine learning to automate processes, gain insights from data, and create intelligent products that give you a competitive edge."
+      },
+      "digital-strategy": {
+        "title": "Digital Strategy",
+        "excerpt": "Strategic roadmaps for successful digital transformation.",
+        "description": "Our strategists work with your leadership to develop comprehensive digital transformation roadmaps that align technology investments with business objectives."
+      },
+      "ui-ux-design": {
+        "title": "UI/UX Design",
+        "excerpt": "Human-centered design that drives engagement.",
+        "description": "Our design team creates intuitive, beautiful interfaces grounded in user research. We design experiences that delight users and drive measurable business results."
+      }
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "eyebrow": "Portfolio",
+      "title": "Our Case Studies",
+      "subtitle": "Real projects, real results. See how we've helped organizations across industries achieve their digital goals."
+    },
+    "filterAll": "All",
+    "items": {
+      "fintech-platform": {
+        "title": "FinTech Payment Platform",
+        "excerpt": "A complete payment processing overhaul for a leading financial institution.",
+        "description": "We redesigned and rebuilt the entire payment infrastructure, achieving 99.99% uptime and reducing transaction processing time by 60%."
+      },
+      "healthcare-portal": {
+        "title": "Healthcare Patient Portal",
+        "excerpt": "Digital patient experience for a major hospital network.",
+        "description": "We built a comprehensive patient portal enabling appointment booking, medical records access, and telemedicine — serving over 500,000 patients."
+      },
+      "ecommerce-revamp": {
+        "title": "E-Commerce Platform Revamp",
+        "excerpt": "Performance-focused rebuild of a major retail platform.",
+        "description": "Complete frontend rebuild using Next.js resulting in 3x faster page loads, 45% increase in conversion rate, and 200% improvement in Core Web Vitals."
+      },
+      "smart-logistics": {
+        "title": "Smart Logistics Dashboard",
+        "excerpt": "AI-powered logistics management and tracking system.",
+        "description": "Real-time fleet tracking, route optimization using ML, and automated dispatch system reducing delivery times by 35% and operational costs by 25%."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Get in Touch",
+      "title": "Let's Build Something Great",
+      "subtitle": "Tell us about your project and we'll get back to you within 24 hours."
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+966 5XX XXX XXXX",
+      "service": "Service Interested In",
+      "servicePlaceholder": "Select a service",
+      "budget": "Budget Range",
+      "budgetPlaceholder": "Select your budget range",
+      "message": "Project Details",
+      "messagePlaceholder": "Tell us about your project, goals, and timeline...",
+      "step1Title": "Your Information",
+      "step2Title": "Project Details",
+      "step3Title": "Review & Submit",
+      "review": "Review your information",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. Our team will review your message and get back to you within 24 hours."
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Message is required"
+      }
+    },
+    "info": {
+      "address": "Riyadh, Saudi Arabia",
+      "email": "info@takamul.sa",
+      "phone": "+966 XX XXX XXXX"
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "Our Blog",
+      "subtitle": "Thoughts, insights, and best practices from our team of digital experts."
+    },
+    "readTime": "min read",
+    "publishedOn": "Published on"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "error": {
+    "title": "Something Went Wrong",
+    "message": "An unexpected error occurred. Please try again.",
+    "retry": "Try Again"
+  }
+}

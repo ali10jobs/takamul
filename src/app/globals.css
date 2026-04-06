@@ -1,26 +1,142 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* ============================================
+   Brand Design Tokens — Takamul Smart Technology
+   ============================================ */
 
 :root {
+  /* Primary — Deep Blue (trust, technology) */
+  --color-primary-50: oklch(0.97 0.01 250);
+  --color-primary-100: oklch(0.93 0.03 250);
+  --color-primary-200: oklch(0.86 0.06 250);
+  --color-primary-300: oklch(0.74 0.1 250);
+  --color-primary-400: oklch(0.62 0.15 250);
+  --color-primary-500: oklch(0.5 0.18 250);
+  --color-primary-600: oklch(0.42 0.18 250);
+  --color-primary-700: oklch(0.35 0.16 250);
+  --color-primary-800: oklch(0.28 0.12 250);
+  --color-primary-900: oklch(0.22 0.09 250);
+  --color-primary-950: oklch(0.16 0.06 250);
+
+  /* Secondary — Teal/Cyan (innovation, digital) */
+  --color-secondary-50: oklch(0.97 0.02 185);
+  --color-secondary-100: oklch(0.93 0.04 185);
+  --color-secondary-200: oklch(0.86 0.08 185);
+  --color-secondary-300: oklch(0.74 0.12 185);
+  --color-secondary-400: oklch(0.62 0.14 185);
+  --color-secondary-500: oklch(0.52 0.14 185);
+  --color-secondary-600: oklch(0.44 0.12 185);
+  --color-secondary-700: oklch(0.37 0.1 185);
+  --color-secondary-800: oklch(0.3 0.08 185);
+  --color-secondary-900: oklch(0.24 0.06 185);
+  --color-secondary-950: oklch(0.18 0.04 185);
+
+  /* Accent — Warm Amber/Gold (premium, authority) */
+  --color-accent-50: oklch(0.98 0.02 85);
+  --color-accent-100: oklch(0.95 0.05 85);
+  --color-accent-200: oklch(0.9 0.1 85);
+  --color-accent-300: oklch(0.82 0.14 85);
+  --color-accent-400: oklch(0.75 0.16 85);
+  --color-accent-500: oklch(0.68 0.16 85);
+  --color-accent-600: oklch(0.58 0.14 85);
+  --color-accent-700: oklch(0.48 0.12 85);
+  --color-accent-800: oklch(0.4 0.1 85);
+  --color-accent-900: oklch(0.32 0.07 85);
+  --color-accent-950: oklch(0.24 0.05 85);
+
+  /* Semantic */
+  --color-success: oklch(0.55 0.15 150);
+  --color-warning: oklch(0.7 0.15 70);
+  --color-error: oklch(0.55 0.2 25);
+  --color-info: oklch(0.6 0.15 250);
+
+  /* Light mode surfaces */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: oklch(0.15 0.02 250);
+  --muted: oklch(0.96 0.005 250);
+  --muted-foreground: oklch(0.55 0.02 250);
+  --border: oklch(0.9 0.005 250);
+  --card: #ffffff;
+  --card-foreground: oklch(0.15 0.02 250);
+}
+
+/* Dark mode */
+.dark {
+  --background: oklch(0.13 0.02 250);
+  --foreground: oklch(0.93 0.01 250);
+  --muted: oklch(0.2 0.02 250);
+  --muted-foreground: oklch(0.6 0.02 250);
+  --border: oklch(0.25 0.02 250);
+  --card: oklch(0.17 0.02 250);
+  --card-foreground: oklch(0.93 0.01 250);
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--color-primary-500);
+  --color-secondary: var(--color-secondary-500);
+  --color-accent: var(--color-accent-500);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+
+  /* Fonts — set by next/font in layout.tsx */
+  --font-sans: var(--font-inter);
+  --font-arabic: var(--font-ibm-plex-arabic);
+
+  /* Animation tokens */
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), var(--font-arabic), system-ui, sans-serif;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  inset-inline-start: -9999px;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary-500);
+  color: white;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  inset-inline-start: 0.5rem;
+  top: 0.5rem;
 }
