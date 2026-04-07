@@ -32,8 +32,8 @@ export function PartnersStrip({ title, partners }: PartnersStripProps) {
       {/* Infinite scroll strip — CSS-driven on compositor thread */}
       <div className="relative overflow-hidden">
         {/* Fade edges */}
-        <div className="from-background pointer-events-none absolute inset-y-0 inset-s-0 z-10 w-24 bg-linear-to-r to-transparent" />
-        <div className="from-background pointer-events-none absolute inset-y-0 inset-e-0 z-10 w-24 bg-linear-to-l to-transparent" />
+        {/* <div className="from-background pointer-events-none absolute inset-y-0 inset-s-0 z-10 w-24 bg-linear-to-r to-transparent" />
+        <div className="from-background pointer-events-none absolute inset-y-0 inset-e-0 z-10 w-24 bg-linear-to-l to-transparent" /> */}
 
         {/* w-max is critical — lets the div expand beyond viewport to fit all items */}
         <div
