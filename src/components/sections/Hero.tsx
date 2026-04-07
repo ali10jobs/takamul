@@ -79,22 +79,18 @@ export function Hero({ eyebrow, title, subtitle, cta, ctaSecondary }: HeroProps)
           transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <Link href={`/${locale}/contact`}>
-            <Link
-              href="#"
-              className="group flex items-center justify-center rounded-full bg-[var(--color-primary-400)] px-6 py-4 text-white hover:bg-[var(--color-primary-500)] dark:bg-[var(--color-primary-600)] dark:hover:bg-[var(--color-primary-700)]"
-            >
-              {cta}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-            </Link>
+          <Link
+            href={`/${locale}/contact`}
+            className="group flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary-400)] px-6 py-4 text-white hover:bg-[var(--color-primary-500)] dark:bg-[var(--color-primary-600)] dark:hover:bg-[var(--color-primary-700)]"
+          >
+            {cta}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
           </Link>
-          <Link href={`/${locale}/case-studies`}>
-            <Link
-              href="#"
-              className="text-foreground/40 hover:text-foreground/80 hover:bg-foreground/10 rounded-full border-white/60 px-6 py-4 dark:border-[var(--color-primary-600)] dark:text-[var(--color-primary-200)] dark:hover:bg-[var(--color-primary-900)]"
-            >
-              {ctaSecondary}
-            </Link>
+          <Link
+            href={`/${locale}/case-studies`}
+            className="text-foreground/40 hover:text-foreground/80 hover:bg-foreground/10 rounded-full border border-white/60 px-6 py-4 dark:border-[var(--color-primary-600)] dark:text-[var(--color-primary-200)] dark:hover:bg-[var(--color-primary-900)]"
+          >
+            {ctaSecondary}
           </Link>
         </motion.div>
 

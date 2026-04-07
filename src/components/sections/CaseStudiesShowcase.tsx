@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
@@ -103,6 +104,12 @@ export function CaseStudiesShowcase({
                   >
                     {/* Image placeholder with gradient overlay */}
                     <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[var(--color-primary-200)] to-[var(--color-secondary-200)] dark:from-[var(--color-primary-800)] dark:to-[var(--color-secondary-800)]">
+                      <Image
+                        src={cs.image}
+                        alt={dict.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                       <div className="from-card/80 absolute inset-0 bg-gradient-to-t to-transparent" />
                       {/* Client name overlay */}
                       <span className="text-muted-foreground absolute start-4 bottom-3 text-xs font-medium tracking-wider uppercase">

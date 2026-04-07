@@ -5,7 +5,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'fintech-platform',
     slug: 'fintech-platform',
     client: 'Leading Financial Institution',
-    image: '/images/case-studies/fintech-platform.jpg',
+    image: '/images/case-studies/fintech2.jpg',
     tags: ['fintech', 'backend', 'infrastructure'],
     metrics: [
       { label: 'Uptime', value: '99.99%' },
@@ -17,7 +17,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'healthcare-portal',
     slug: 'healthcare-portal',
     client: 'Major Hospital Network',
-    image: '/images/case-studies/healthcare-portal.jpg',
+    image: '/images/case-studies/healthcare2.jpg',
     tags: ['healthcare', 'fullstack', 'design'],
     metrics: [
       { label: 'Patients Served', value: '500K+' },
@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'ecommerce-revamp',
     slug: 'ecommerce-revamp',
     client: 'Major Retail Platform',
-    image: '/images/case-studies/ecommerce-revamp.jpg',
+    image: '/images/case-studies/ecommerce2.jpg',
     tags: ['ecommerce', 'frontend', 'performance'],
     metrics: [
       { label: 'Faster Page Loads', value: '3x' },
@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     id: 'smart-logistics',
     slug: 'smart-logistics',
     client: 'National Logistics Company',
-    image: '/images/case-studies/smart-logistics.jpg',
+    image: '/images/case-studies/logistics2.jpg',
     tags: ['logistics', 'ai', 'dashboard'],
     metrics: [
       { label: 'Delivery Time Reduction', value: '35%' },

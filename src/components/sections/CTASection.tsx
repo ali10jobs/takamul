@@ -65,14 +65,12 @@ export function CTASection({ title, subtitle, ctaText }: CTASectionProps) {
           </motion.p>
 
           <motion.div variants={fadeUp}>
-            <Link href={`/${locale}/contact`}>
-              <Link
-                href="#"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 font-semibold text-[var(--color-primary-800)]"
-              >
-                {ctaText}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-              </Link>
+            <Link
+              href={`/${locale}/contact`}
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 font-semibold text-[var(--color-primary-800)]"
+            >
+              {ctaText}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </Link>
           </motion.div>
         </motion.div>

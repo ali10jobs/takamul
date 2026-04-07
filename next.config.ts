@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next';
-import { withSentryConfig } from '@sentry/nextjs';
 
 // Security headers applied to all routes
 const securityHeaders = [
@@ -35,7 +34,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "font-src 'self'",
-      "connect-src 'self' https://api.* https://www.google-analytics.com https://*.sentry.io https://*.upstash.io",
+      "connect-src 'self' https://api.* https://www.google-analytics.com https://*.upstash.io",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
@@ -75,9 +74,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
-  silent: !process.env.CI,
-  widenClientFileUpload: true,
-});
+export default nextConfig;

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import * as Sentry from '@sentry/nextjs';
 import type { Dictionary } from '@/types/dictionary';
 
 const fallback = {
@@ -21,10 +20,6 @@ export default function Error({
   const params = useParams<{ locale: string }>();
   const locale = params?.locale ?? 'en';
   const [dict, setDict] = useState<Dictionary['error']>(fallback);
-
-  useEffect(() => {
-    Sentry.captureException(error);
-  }, [error]);
 
   useEffect(() => {
     import(`@/i18n/dictionaries/${locale}.json`).then((mod) => {

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
@@ -12,6 +13,7 @@ import type { CaseStudy } from '@/types/case-study';
 interface CaseStudyDetailContentProps {
   caseStudy: CaseStudy;
   dictionary: { title: string; excerpt: string; description: string };
+  image: string;
   ctaText: string;
   backLabel: string;
   locale: string;
@@ -44,9 +46,16 @@ export function CaseStudyDetailContent({
 
         <motion.div variants={staggerContainer(0.12)} initial="hidden" animate="visible">
           {/* Hero image placeholder */}
-          <motion.div
+          {/* <motion.div
             variants={fadeUp}
             className="mb-8 h-64 overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--color-primary-200)] to-[var(--color-secondary-200)] sm:h-80 lg:h-96 dark:from-[var(--color-primary-800)] dark:to-[var(--color-secondary-800)]"
+          /> */}
+          <Image
+            src={caseStudy.image}
+            alt={dictionary.title}
+            className="mb-8 w-full overflow-hidden rounded-2xl object-cover sm:h-80 lg:h-[800px]"
+            width={800}
+            height={450}
           />
 
           {/* Client + Title */}
@@ -90,10 +99,11 @@ export function CaseStudyDetailContent({
 
           {/* CTA */}
           <motion.div variants={fadeUp} className="mt-12">
-            <Link href={`/${locale}/contact`}>
-              <Button variant="primary" size="lg">
-                {ctaText}
-              </Button>
+            <Link
+              className="rounded-full bg-[var(--color-primary-500)] px-6 py-4"
+              href={`/${locale}/contact`}
+            >
+              {ctaText}
             </Link>
           </motion.div>
         </motion.div>
