@@ -42,5 +42,13 @@ export default async function BlogPostPage({
   const item = dict.blog.items[post.id];
   if (!item) notFound();
 
-  return <BlogPostContent post={post} dictionary={item} blogDict={dict.blog} locale={locale} />;
+  return (
+    <BlogPostContent
+      post={post}
+      dictionary={item}
+      blogDict={dict.blog}
+      backLabel={dict.common.nav.blog}
+      locale={locale}
+    />
+  );
 }

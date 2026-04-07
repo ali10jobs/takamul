@@ -14,6 +14,7 @@ interface ServiceDetailContentProps {
   service: Service;
   dictionary: { title: string; excerpt: string; description: string };
   ctaText: string;
+  backLabel: string;
   locale: string;
 }
 
@@ -21,6 +22,7 @@ export function ServiceDetailContent({
   service,
   dictionary,
   ctaText,
+  backLabel,
   locale,
 }: ServiceDetailContentProps) {
   return (
@@ -37,7 +39,7 @@ export function ServiceDetailContent({
             className="text-muted-foreground hover:text-foreground mb-8 inline-flex items-center gap-2 text-sm transition-colors"
           >
             <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-            Services
+            {backLabel}
           </Link>
         </motion.div>
 

@@ -67,7 +67,7 @@ export function BlogListContent({ dictionary, posts, locale }: BlogListContentPr
                 <motion.div key={post.id} variants={fadeUp}>
                   <Link
                     href={`/${locale}/blog/${post.slug}`}
-                    className="group border-border bg-card flex h-full flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl"
+                    className="group border-border bg-card flex h-full flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl dark:hover:border-[var(--color-primary-700)]"
                   >
                     {/* Image placeholder */}
                     <div className="h-48 bg-gradient-to-br from-[var(--color-primary-100)] to-[var(--color-secondary-100)] dark:from-[var(--color-primary-900)] dark:to-[var(--color-secondary-900)]">

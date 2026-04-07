@@ -26,8 +26,8 @@ export function ValuesGrid({ eyebrow, title, subtitle, items, values }: ValuesGr
     <section className="relative py-20 lg:py-28">
       {/* Subtle diagonal accent */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -start-20 top-0 h-full w-[1px] rotate-12 bg-gradient-to-b from-transparent via-[var(--color-primary-200)] to-transparent opacity-40" />
-        <div className="absolute -end-10 top-0 h-full w-[1px] -rotate-12 bg-gradient-to-b from-transparent via-[var(--color-accent-200)] to-transparent opacity-30" />
+        <div className="absolute -start-20 top-0 h-full w-[1px] rotate-12 bg-gradient-to-b from-transparent via-[var(--color-primary-300)] to-transparent opacity-30 dark:via-[var(--color-primary-700)] dark:opacity-20" />
+        <div className="absolute -end-10 top-0 h-full w-[1px] -rotate-12 bg-gradient-to-b from-transparent via-[var(--color-accent-300)] to-transparent opacity-20 dark:via-[var(--color-accent-700)] dark:opacity-15" />
       </div>
 
       <Container>
@@ -48,7 +48,7 @@ export function ValuesGrid({ eyebrow, title, subtitle, items, values }: ValuesGr
               <motion.div
                 key={value.id}
                 variants={fadeUp}
-                className="group border-border bg-card relative rounded-2xl border p-6 transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-lg"
+                className="group border-border bg-card relative rounded-2xl border p-6 transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-lg dark:hover:border-[var(--color-primary-700)]"
               >
                 {/* Icon container with gradient background */}
                 <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-[var(--color-primary-100)] to-[var(--color-primary-50)] p-3 dark:from-[var(--color-primary-900)] dark:to-[var(--color-primary-950)]">

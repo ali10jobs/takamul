@@ -11,6 +11,7 @@ import { useAppSelector, useAppDispatch } from '@/store/hooks';
 import { closeMobileMenu } from '@/store/slices/uiSlice';
 import { cn } from '@/lib/utils';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import type { Dictionary } from '@/types/dictionary';
 
 interface MobileMenuProps {
@@ -94,7 +95,7 @@ export function MobileMenu({ dictionary }: MobileMenuProps) {
                       className={cn(
                         'block rounded-xl px-4 py-3 text-base font-medium transition-colors',
                         isActive
-                          ? 'bg-[var(--color-primary-50)] text-[var(--color-primary-600)]'
+                          ? 'bg-[var(--color-primary-50)] text-[var(--color-primary-600)] dark:bg-[var(--color-primary-950)] dark:text-[var(--color-primary-300)]'
                           : 'text-foreground hover:bg-muted'
                       )}
                     >
@@ -105,12 +106,13 @@ export function MobileMenu({ dictionary }: MobileMenuProps) {
               })}
             </nav>
 
-            {/* Language switcher at bottom */}
-            <div className="border-border border-t p-4">
+            {/* Theme + Language at bottom */}
+            <div className="border-border flex items-center justify-between border-t p-4">
               <LanguageSwitcher
                 dictionary={dictionary.language}
-                className="w-full justify-center"
+                className="flex-1 justify-center"
               />
+              <ThemeToggle />
             </div>
           </motion.div>
         </>

@@ -51,9 +51,8 @@ export function PartnersStrip({ title, partners }: PartnersStripProps) {
               className="flex h-12 w-32 shrink-0 items-center justify-center opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
               title={partner.name}
             >
-              <span className="text-muted-foreground text-lg font-bold tracking-tight">
-                {partner.name}
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={partner.logo} alt={partner.name} className="h-full w-full object-contain" />
             </div>
           ))}
         </motion.div>

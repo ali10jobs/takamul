@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from '@/hooks/useLocale';
-import { Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface LanguageSwitcherProps {
@@ -31,13 +30,13 @@ export function LanguageSwitcher({ className, dictionary }: LanguageSwitcherProp
     <button
       onClick={handleSwitch}
       className={cn(
-        'text-foreground hover:bg-muted inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+        'h-10 w-10 rounded-full border border-white/20 bg-white/10 shadow-xl backdrop-blur-lg',
         className
       )}
       aria-label={`Switch to ${dictionary.switchTo}`}
     >
-      <Globe className="h-4 w-4" />
-      <span>{dictionary.switchTo}</span>
+      {/* <Globe className="h-4 w-4" /> */}
+      <span className="text-gray-400">{dictionary.switchTo === 'English' ? 'ع' : 'En'}</span>
     </button>
   );
 }

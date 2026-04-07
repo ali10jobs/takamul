@@ -1,8 +1,12 @@
 import { getDictionary } from '@/i18n/get-dictionary';
-import { type Locale } from '@/i18n/config';
+import { locales, type Locale } from '@/i18n/config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { BlogListContent } from './BlogListContent';
 import { blogPosts } from '@/data/blog';
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

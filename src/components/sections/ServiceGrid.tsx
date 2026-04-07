@@ -50,7 +50,7 @@ export function ServiceGrid({ eyebrow, title, subtitle, items, services }: Servi
               <motion.div key={service.id} variants={fadeUp}>
                 <Link
                   href={`/${locale}/services/${service.slug}`}
-                  className="group border-border bg-card relative flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl"
+                  className="group border-border bg-card relative flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl dark:hover:border-[var(--color-primary-700)]"
                 >
                   {/* Service number + icon row */}
                   <div className="mb-4 flex items-center justify-between">

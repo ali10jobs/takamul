@@ -135,13 +135,13 @@ export function Footer({ dictionary }: FooterProps) {
           </p>
           <div className="flex gap-4">
             <Link
-              href={`/${locale}`}
+              href={`/${locale}/privacy`}
               className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               {dictionary.footer.privacy}
             </Link>
             <Link
-              href={`/${locale}`}
+              href={`/${locale}/terms`}
               className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               {dictionary.footer.terms}

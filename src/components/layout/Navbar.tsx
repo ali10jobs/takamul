@@ -16,30 +16,36 @@ export function Navbar({ dictionary }: NavbarProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
-      {mainNav.map((item) => {
-        const href = `/${locale}${item.href === '/' ? '' : item.href}`;
-        const isActive =
-          item.href === '/'
-            ? pathname === `/${locale}` || pathname === `/${locale}/`
-            : pathname.startsWith(`/${locale}${item.href}`);
+    <nav className="hidden items-center lg:flex" aria-label="Main navigation">
+      {/* Liquid glass pill wrapping all links */}
+      <div className="relative flex items-center gap-0.5 rounded-full border border-white/20 bg-white/10 px-2 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_4px_24px_rgba(0,0,0,0.08)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/5 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_24px_rgba(0,0,0,0.3)]">
+        {/* Gloss sheen overlay */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl bg-linear-to-b from-white/20 to-transparent dark:from-white/8" />
 
-        return (
-          <Link
-            key={item.id}
-            href={href}
-            className={cn(
-              'relative rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:text-[var(--color-primary-500)]',
-              isActive ? 'text-[var(--color-primary-500)]' : 'text-foreground'
-            )}
-          >
-            {dictionary[item.id as keyof typeof dictionary]}
-            {isActive && (
-              <span className="absolute inset-x-1 -bottom-px h-0.5 rounded-full bg-[var(--color-primary-500)]" />
-            )}
-          </Link>
-        );
-      })}
+        {mainNav.map((item) => {
+          const href = `/${locale}${item.href === '/' ? '' : item.href}`;
+          const isActive =
+            item.href === '/'
+              ? pathname === `/${locale}` || pathname === `/${locale}/`
+              : pathname.startsWith(`/${locale}${item.href}`);
+
+          return (
+            <Link
+              key={item.id}
+              href={href}
+              suppressHydrationWarning
+              className={cn(
+                'relative mx-2 rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200',
+                isActive
+                  ? 'bg-white/25 text-[var(--color-primary-700)] shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_1px_4px_rgba(0,0,0,0.1)] dark:bg-white/15 dark:text-[var(--color-primary-200)]'
+                  : 'text-foreground/80 hover:text-foreground dark:text-foreground/70 dark:hover:text-foreground hover:bg-white/15 dark:hover:bg-white/10'
+              )}
+            >
+              {dictionary[item.id as keyof typeof dictionary]}
+            </Link>
+          );
+        })}
+      </div>
     </nav>
   );
 }

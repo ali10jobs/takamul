@@ -13,6 +13,7 @@ interface CaseStudyDetailContentProps {
   caseStudy: CaseStudy;
   dictionary: { title: string; excerpt: string; description: string };
   ctaText: string;
+  backLabel: string;
   locale: string;
 }
 
@@ -20,6 +21,7 @@ export function CaseStudyDetailContent({
   caseStudy,
   dictionary,
   ctaText,
+  backLabel,
   locale,
 }: CaseStudyDetailContentProps) {
   return (
@@ -36,7 +38,7 @@ export function CaseStudyDetailContent({
             className="text-muted-foreground hover:text-foreground mb-8 inline-flex items-center gap-2 text-sm transition-colors"
           >
             <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-            Case Studies
+            {backLabel}
           </Link>
         </motion.div>
 

@@ -1,18 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'motion/react';
-import { Menu } from 'lucide-react';
+import { Menu, Mail } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { useAppDispatch } from '@/store/hooks';
 import { toggleMobileMenu } from '@/store/slices/uiSlice';
-import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/Container';
 import { Navbar } from './Navbar';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileMenu } from './MobileMenu';
-import { Button } from '@/components/ui/Button';
+import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import type { Dictionary } from '@/types/dictionary';
 
 interface HeaderProps {
@@ -27,38 +27,37 @@ export function Header({ dictionary }: HeaderProps) {
   return (
     <>
       <motion.header
-        className={cn(
-          'fixed inset-x-0 top-0 z-30 transition-colors duration-300',
-          !isAtTop && 'border-border bg-background/80 border-b backdrop-blur-xl'
-        )}
-        initial={{ y: 0 }}
-        animate={{ y: direction === 'down' && !isAtTop ? -100 : 0 }}
+        className="fixed inset-s-4 inset-e-4 top-4 z-30"
+        initial={false}
+        animate={{ y: direction === 'down' && !isAtTop ? -120 : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <Container className="flex h-16 items-center justify-between lg:h-20">
+        <Container className="flex h-14 items-center justify-between lg:h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="text-foreground text-xl font-bold tracking-tight">
-            <span className="text-[var(--color-primary-500)]">Takamul</span>
-            <span className="hidden sm:inline"> Smart Tech</span>
+          <Link href={`/${locale}`} className="p-2">
+            <Image src="/images/takamul.png" alt="Takamul Logo" width={40} height={40} />
           </Link>
 
           {/* Desktop nav */}
           <Navbar dictionary={dictionary.nav} />
 
           {/* Desktop actions */}
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 rounded-2xl px-2 py-1.5 lg:flex">
+            <ThemeToggle />
             <LanguageSwitcher dictionary={dictionary.language} />
-            <Link href={`/${locale}/contact`}>
-              <Button variant="primary" size="sm">
-                {dictionary.cta.contactUs}
-              </Button>
+            <Link
+              href={`/${locale}/contact`}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-xl backdrop-blur-lg transition-all hover:bg-white/20"
+              aria-label={dictionary.cta.contactUs}
+            >
+              <Mail className="h-4 w-4 text-gray-400" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => dispatch(toggleMobileMenu())}
-            className="text-foreground hover:bg-muted rounded-lg p-2 lg:hidden"
+            className="text-foreground rounded-xl border border-white/20 bg-white/10 p-2 backdrop-blur-2xl transition-all hover:bg-white/20 lg:hidden dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
             aria-label="Open menu"
           >
             <Menu className="h-5 w-5" />

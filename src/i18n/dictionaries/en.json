@@ -258,6 +258,80 @@
       }
     }
   },
+  "privacy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect your personal information."
+    },
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly, such as your name, email address, company name, and phone number when you fill out our contact form. We also collect usage data through cookies and analytics tools to improve our website."
+      },
+      {
+        "title": "How We Use Your Information",
+        "content": "We use your information to respond to inquiries, provide our services, improve our website, send relevant communications (with your consent), and comply with legal obligations."
+      },
+      {
+        "title": "Data Protection",
+        "content": "We implement industry-standard security measures to protect your personal data, including encryption in transit and at rest, access controls, and regular security audits."
+      },
+      {
+        "title": "Cookies",
+        "content": "We use cookies to enhance your browsing experience and gather analytics data. You can manage cookie preferences through our cookie consent banner. Analytics cookies are only loaded after your explicit consent."
+      },
+      {
+        "title": "Third-Party Services",
+        "content": "We may share data with trusted third-party services including Google Analytics (website analytics), Sentry (error monitoring), and Resend (email delivery). These services process data in accordance with their own privacy policies."
+      },
+      {
+        "title": "Your Rights",
+        "content": "You have the right to access, correct, or delete your personal data. You may also withdraw consent for data processing at any time. To exercise these rights, please contact us at info@takamul.sa."
+      },
+      {
+        "title": "Contact Us",
+        "content": "If you have questions about this privacy policy or our data practices, please contact us at info@takamul.sa."
+      }
+    ]
+  },
+  "terms": {
+    "hero": {
+      "title": "Terms of Service",
+      "subtitle": "The terms and conditions governing your use of our website and services."
+    },
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "content": "By accessing or using the Takamul Smart Technology website and services, you agree to be bound by these terms. If you do not agree, please do not use our services."
+      },
+      {
+        "title": "Our Services",
+        "content": "Takamul Smart Technology provides digital transformation consulting, web and mobile development, cloud solutions, AI/ML services, and UI/UX design. Service details, timelines, and deliverables are defined in individual project agreements."
+      },
+      {
+        "title": "Intellectual Property",
+        "content": "All content on this website, including text, graphics, logos, and software, is the property of Takamul Smart Technology and protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without our written consent."
+      },
+      {
+        "title": "User Responsibilities",
+        "content": "You agree to provide accurate information when using our contact form, not to misuse our website or attempt unauthorized access, and to comply with all applicable laws when using our services."
+      },
+      {
+        "title": "Limitation of Liability",
+        "content": "Takamul Smart Technology shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services. Our total liability is limited to the amount paid for the specific service in question."
+      },
+      {
+        "title": "Governing Law",
+        "content": "These terms are governed by the laws of the Kingdom of Saudi Arabia. Any disputes shall be resolved in the courts of Riyadh, Saudi Arabia."
+      },
+      {
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated revision date. Continued use of our services constitutes acceptance of the revised terms."
+      }
+    ]
+  },
   "notFound": {
     "title": "Page Not Found",
     "message": "Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.",

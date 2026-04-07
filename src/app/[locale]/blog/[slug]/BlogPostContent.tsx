@@ -13,10 +13,17 @@ interface BlogPostContentProps {
   post: BlogPost;
   dictionary: { title: string; excerpt: string; content: string };
   blogDict: Dictionary['blog'];
+  backLabel: string;
   locale: string;
 }
 
-export function BlogPostContent({ post, dictionary, blogDict, locale }: BlogPostContentProps) {
+export function BlogPostContent({
+  post,
+  dictionary,
+  blogDict,
+  backLabel,
+  locale,
+}: BlogPostContentProps) {
   return (
     <div className="py-16 lg:py-24">
       <Container className="max-w-3xl">
@@ -31,7 +38,7 @@ export function BlogPostContent({ post, dictionary, blogDict, locale }: BlogPost
             className="text-muted-foreground hover:text-foreground mb-8 inline-flex items-center gap-2 text-sm transition-colors"
           >
             <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
-            Blog
+            {backLabel}
           </Link>
         </motion.div>
 

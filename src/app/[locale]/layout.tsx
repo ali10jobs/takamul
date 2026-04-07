@@ -8,6 +8,8 @@ import { StoreProvider } from '@/store/provider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/shared/CookieConsent';
+import { GoogleAnalytics } from '@/components/shared/GoogleAnalytics';
+import { ThemeProvider } from '@/components/shared/ThemeProvider';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -65,10 +67,16 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={cn(inter.variable, ibmPlexArabic.variable, 'h-full antialiased')}
+      className={cn(inter.variable, ibmPlexArabic.variable, 'dark h-full antialiased')}
       suppressHydrationWarning
     >
       <head>
+        {/* Prevent flash of wrong theme — runs before React hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})()`,
+          }}
+        />
         {/* JSON-LD Organization Schema */}
         <script
           type="application/ld+json"
@@ -97,16 +105,19 @@ export default async function LocaleLayout({
       </head>
       <body className="bg-background text-foreground min-h-full">
         <StoreProvider>
-          {/* Skip link for accessibility */}
-          <a href="#main-content" className="skip-link">
-            {locale === 'ar' ? 'تخطي إلى المحتوى الرئيسي' : 'Skip to main content'}
-          </a>
-          <Header dictionary={dictionary.common} />
-          <main id="main-content" className="pt-16 lg:pt-20">
-            {children}
-          </main>
-          <Footer dictionary={dictionary.common} />
-          <CookieConsent dictionary={dictionary.common.cookie} />
+          <ThemeProvider>
+            {/* Skip link for accessibility */}
+            <a href="#main-content" className="skip-link">
+              {locale === 'ar' ? 'تخطي إلى المحتوى الرئيسي' : 'Skip to main content'}
+            </a>
+            <Header dictionary={dictionary.common} />
+            <main id="main-content" className="pt-16 lg:pt-20">
+              {children}
+            </main>
+            <Footer dictionary={dictionary.common} />
+            <CookieConsent dictionary={dictionary.common.cookie} />
+            <GoogleAnalytics />
+          </ThemeProvider>
         </StoreProvider>
       </body>
     </html>

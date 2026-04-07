@@ -205,6 +205,28 @@ export interface Dictionary {
       }
     >;
   };
+  privacy: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    lastUpdated: string;
+    sections: Array<{
+      title: string;
+      content: string;
+    }>;
+  };
+  terms: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    lastUpdated: string;
+    sections: Array<{
+      title: string;
+      content: string;
+    }>;
+  };
   notFound: {
     title: string;
     message: string;

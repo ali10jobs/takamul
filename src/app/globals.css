@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Use class-based dark mode (.dark on <html>) instead of prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ============================================
    Brand Design Tokens — Takamul Smart Technology
    ============================================ */
@@ -123,6 +126,23 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-primary-500);
   outline-offset: 2px;
+}
+
+/* Native select options — inherit theme background in dark mode */
+select option {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Scrollbar styling for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark) {
+    color-scheme: light;
+  }
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 /* Skip link */

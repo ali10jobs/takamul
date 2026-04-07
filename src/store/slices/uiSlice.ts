@@ -9,7 +9,7 @@ interface UiState {
 }
 
 const initialState: UiState = {
-  theme: 'system',
+  theme: 'dark',
   mobileMenuOpen: false,
   cookieConsent: null,
 };

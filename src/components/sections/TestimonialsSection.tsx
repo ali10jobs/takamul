@@ -51,7 +51,7 @@ export function TestimonialsSection({
               className="border-border bg-card relative rounded-2xl border p-6"
             >
               {/* Quote icon */}
-              <Quote className="mb-4 h-8 w-8 text-[var(--color-primary-200)] dark:text-[var(--color-primary-800)]" />
+              <Quote className="mb-4 h-8 w-8 text-[var(--color-primary-300)] dark:text-[var(--color-primary-600)]" />
 
               <blockquote className="text-foreground mb-6 text-sm leading-relaxed">
                 &ldquo;{t.quote}&rdquo;

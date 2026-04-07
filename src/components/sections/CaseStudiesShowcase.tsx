@@ -99,7 +99,7 @@ export function CaseStudiesShowcase({
                 >
                   <Link
                     href={`/${locale}/case-studies/${cs.slug}`}
-                    className="group border-border bg-card relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl"
+                    className="group border-border bg-card relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:border-[var(--color-primary-300)] hover:shadow-[var(--color-primary-500)]/5 hover:shadow-xl dark:hover:border-[var(--color-primary-700)]"
                   >
                     {/* Image placeholder with gradient overlay */}
                     <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[var(--color-primary-200)] to-[var(--color-secondary-200)] dark:from-[var(--color-primary-800)] dark:to-[var(--color-secondary-800)]">

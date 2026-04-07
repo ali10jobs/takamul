@@ -1,0 +1,21 @@
+{
+  "name": "Takamul Smart Technology",
+  "short_name": "Takamul",
+  "description": "Your trusted partner for digital transformation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e27",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "/favicons/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

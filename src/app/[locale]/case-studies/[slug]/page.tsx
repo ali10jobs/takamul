@@ -47,6 +47,7 @@ export default async function CaseStudyDetailPage({
       caseStudy={cs}
       dictionary={item}
       ctaText={dict.common.cta.contactUs}
+      backLabel={dict.common.nav.caseStudies}
       locale={locale}
     />
   );

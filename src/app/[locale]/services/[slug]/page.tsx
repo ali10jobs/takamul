@@ -47,6 +47,7 @@ export default async function ServiceDetailPage({
       service={service}
       dictionary={item}
       ctaText={dict.common.cta.contactUs}
+      backLabel={dict.common.nav.services}
       locale={locale}
     />
   );
