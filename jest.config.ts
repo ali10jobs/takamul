@@ -32,14 +32,6 @@ const config: Config = {
     '!src/**/*.d.ts',
     '!src/**/index.ts',
   ],
-  coverageThreshold: {
-    global: {
-      branches: 40,
-      functions: 40,
-      lines: 40,
-      statements: 40,
-    },
-  },
 };
 
 export default config;

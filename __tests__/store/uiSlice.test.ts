@@ -6,7 +6,7 @@ import uiReducer, {
 } from '@/store/slices/uiSlice';
 
 const initialState = {
-  theme: 'system' as const,
+  theme: 'dark' as const,
   mobileMenuOpen: false,
   cookieConsent: null as boolean | null,
 };
@@ -25,11 +25,6 @@ describe('uiSlice', () => {
     it('sets theme to light', () => {
       const state = uiReducer(initialState, setTheme('light'));
       expect(state.theme).toBe('light');
-    });
-
-    it('sets theme to system', () => {
-      const state = uiReducer({ ...initialState, theme: 'dark' }, setTheme('system'));
-      expect(state.theme).toBe('system');
     });
   });
 
