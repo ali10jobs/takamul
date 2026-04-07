@@ -310,8 +310,8 @@ export function ContactForm({ dictionary, services }: ContactFormProps) {
         ) : (
           <button
             onClick={handleSubmit}
-            loading={isSubmitting}
-            className="flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary-400)] px-4 py-2 text-white dark:bg-[var(--color-primary-700)]"
+            disabled={isSubmitting}
+            className="flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary-400)] px-4 py-2 text-white disabled:opacity-60 dark:bg-[var(--color-primary-700)]"
           >
             <Send className="h-4 w-4" />
             {isSubmitting ? dictionary.sending : dictionary.submit}

@@ -4,7 +4,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from '@/hooks/useLocale';
 import { cn } from '@/lib/utils';
 import { Globe } from 'lucide-react';
-import { spanToBaggageHeader } from '@sentry/nextjs';
 
 interface LanguageSwitcherProps {
   className?: string;

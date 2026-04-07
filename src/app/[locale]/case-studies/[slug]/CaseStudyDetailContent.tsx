@@ -13,7 +13,6 @@ import type { CaseStudy } from '@/types/case-study';
 interface CaseStudyDetailContentProps {
   caseStudy: CaseStudy;
   dictionary: { title: string; excerpt: string; description: string };
-  image: string;
   ctaText: string;
   backLabel: string;
   locale: string;
