@@ -18,7 +18,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     <button
       onClick={() => dispatch(setTheme(isDark ? 'light' : 'dark'))}
       className={cn(
-        'flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-gray-400 shadow-xl backdrop-blur-lg',
+        'text-foreground/40 inset-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 shadow-sm backdrop-blur-[1px]',
         className
       )}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}

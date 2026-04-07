@@ -27,7 +27,7 @@ export function Header({ dictionary }: HeaderProps) {
   return (
     <>
       <motion.header
-        className="fixed inset-s-4 inset-e-4 top-4 z-30"
+        className="fixed inset-x-4 top-4 z-30"
         initial={false}
         animate={{ y: direction === 'down' && !isAtTop ? -120 : 0 }}
         transition={{ duration: 0.3 }}
@@ -44,10 +44,10 @@ export function Header({ dictionary }: HeaderProps) {
           {/* Desktop actions */}
           <div className="hidden items-center gap-2 rounded-2xl px-2 py-1.5 lg:flex">
             <ThemeToggle />
-            <LanguageSwitcher dictionary={dictionary.language} />
+            <LanguageSwitcher variant="default" dictionary={dictionary.language} />
             <Link
               href={`/${locale}/contact`}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 shadow-xl backdrop-blur-lg transition-all hover:bg-white/20"
+              className="text-foreground/40 inset-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/20 bg-white/10 shadow-sm backdrop-blur-[1px]"
               aria-label={dictionary.cta.contactUs}
             >
               <Mail className="h-4 w-4 text-gray-400" />
@@ -58,7 +58,7 @@ export function Header({ dictionary }: HeaderProps) {
           <button
             onClick={() => dispatch(toggleMobileMenu())}
             className="text-foreground rounded-xl border border-white/20 bg-white/10 p-2 backdrop-blur-2xl transition-all hover:bg-white/20 lg:hidden dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-            aria-label="Open menu"
+            aria-label={locale === 'ar' ? 'افتح القائمة' : 'Open menu'}
           >
             <Menu className="h-5 w-5" />
           </button>

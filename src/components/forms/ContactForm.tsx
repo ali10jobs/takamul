@@ -128,7 +128,7 @@ export function ContactForm({ dictionary, services }: ContactFormProps) {
             <div
               className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold transition-all ${
                 step === currentStep
-                  ? 'bg-[var(--color-primary-500)] text-white shadow-[var(--color-primary-500)]/30 shadow-md'
+                  ? 'bg-[var(--color-primary-400)] text-white shadow-[var(--color-primary-500)]/30 shadow-md dark:bg-[var(--color-primary-700)]'
                   : step < currentStep
                     ? 'bg-[var(--color-primary-100)] text-[var(--color-primary-600)] dark:bg-[var(--color-primary-900)] dark:text-[var(--color-primary-300)]'
                     : 'bg-muted text-muted-foreground'
@@ -300,15 +300,22 @@ export function ContactForm({ dictionary, services }: ContactFormProps) {
         )}
 
         {currentStep < 3 ? (
-          <Button variant="primary" onClick={handleNext} className="gap-1">
+          <button
+            onClick={handleNext}
+            className="flex items-center justify-center gap-1 rounded-full bg-[var(--color-primary-400)] px-4 py-2 text-white dark:bg-[var(--color-primary-700)]"
+          >
             Next
             <ChevronRight className="h-4 w-4 rtl:rotate-180" />
-          </Button>
+          </button>
         ) : (
-          <Button variant="primary" onClick={handleSubmit} loading={isSubmitting} className="gap-2">
+          <button
+            onClick={handleSubmit}
+            loading={isSubmitting}
+            className="flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary-400)] px-4 py-2 text-white dark:bg-[var(--color-primary-700)]"
+          >
             <Send className="h-4 w-4" />
             {isSubmitting ? dictionary.sending : dictionary.submit}
-          </Button>
+          </button>
         )}
       </div>
     </div>

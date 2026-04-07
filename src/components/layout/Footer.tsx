@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLocale } from '@/hooks/useLocale';
 import { mainNav } from '@/data/navigation';
 import { siteConfig } from '@/data/site-config';
@@ -24,7 +25,8 @@ export function Footer({ dictionary }: FooterProps) {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="text-foreground text-lg font-bold">
-              <span className="text-[var(--color-primary-500)]">Takamul</span> Smart Tech
+              {/* <span className="text-[var(--color-primary-500)]">Takamul</span> Smart Tech */}
+              <Image src="/images/takamul.png" alt="Takamul Smart Tech" width={120} height={40} />
             </Link>
             <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
               {dictionary.footer.description}
@@ -123,7 +125,7 @@ export function Footer({ dictionary }: FooterProps) {
               </a>
             </div>
             <div className="mt-4">
-              <LanguageSwitcher dictionary={dictionary.language} />
+              <LanguageSwitcher variant="footer" dictionary={dictionary.language} />
             </div>
           </div>
         </div>

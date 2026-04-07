@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
-import { ShaderAnimation } from '@/components/ui/shader-animation';
+import { FloatingPaths } from '@/components/ui/background-paths';
 import { useLocale } from '@/hooks/useLocale';
 import { ArrowRight } from 'lucide-react';
 
@@ -24,10 +24,10 @@ export function Hero({ eyebrow, title, subtitle, cta, ctaSecondary }: HeroProps)
       {/* Base background — light: soft blue-white, dark: deep navy */}
       <div className="absolute inset-0 z-0 bg-[var(--color-primary-50)] dark:bg-[var(--color-primary-950)]" />
 
-      {/* Shader animation — more visible in dark, subtle in light */}
-      <div className="pointer-events-none absolute inset-0 z-[1] opacity-[5%] dark:opacity-60">
-        <ShaderAnimation className="h-full w-full" />
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_90%_80%_at_50%_50%,black_30%,transparent_100%)]" />
+      {/* Floating path lines — light: slate tones, dark: white tones */}
+      <div className="pointer-events-none absolute inset-0 z-[1] text-slate-900 opacity-40 dark:text-white dark:opacity-30">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
       </div>
 
       {/* Content */}
@@ -80,19 +80,21 @@ export function Hero({ eyebrow, title, subtitle, cta, ctaSecondary }: HeroProps)
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <Link href={`/${locale}/contact`}>
-            <Button variant="primary" size="lg" className="group gap-2">
+            <Link
+              href="#"
+              className="group flex items-center justify-center rounded-full bg-[var(--color-primary-400)] px-6 py-4 text-white hover:bg-[var(--color-primary-500)] dark:bg-[var(--color-primary-600)] dark:hover:bg-[var(--color-primary-700)]"
+            >
               {cta}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-            </Button>
+            </Link>
           </Link>
           <Link href={`/${locale}/case-studies`}>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-[var(--color-primary-400)]/60 text-[var(--color-primary-700)] hover:bg-[var(--color-primary-50)] dark:border-[var(--color-primary-600)] dark:text-[var(--color-primary-200)] dark:hover:bg-[var(--color-primary-900)]"
+            <Link
+              href="#"
+              className="text-foreground/40 hover:text-foreground/80 hover:bg-foreground/10 rounded-full border-white/60 px-6 py-4 dark:border-[var(--color-primary-600)] dark:text-[var(--color-primary-200)] dark:hover:bg-[var(--color-primary-900)]"
             >
               {ctaSecondary}
-            </Button>
+            </Link>
           </Link>
         </motion.div>
 

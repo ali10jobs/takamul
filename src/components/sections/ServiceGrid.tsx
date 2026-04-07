@@ -83,7 +83,7 @@ export function ServiceGrid({ eyebrow, title, subtitle, items, services }: Servi
                   </div>
 
                   {/* Bottom accent on hover */}
-                  <div className="origin-start absolute inset-x-0 bottom-0 h-0.5 scale-x-0 rounded-b-2xl bg-gradient-to-r from-[var(--color-primary-400)] via-[var(--color-accent-400)] to-[var(--color-secondary-400)] transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="origin-start absolute inset-x-0 bottom-0 h-0.5 scale-x-0 rounded-b-2xl bg-gradient-to-r from-[var(--color-primary-300)] to-[var(--color-secondary-300)] transition-transform duration-500 group-hover:scale-x-100" />
                 </Link>
               </motion.div>
             );

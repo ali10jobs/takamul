@@ -27,7 +27,7 @@ export function ValuesGrid({ eyebrow, title, subtitle, items, values }: ValuesGr
       {/* Subtle diagonal accent */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -start-20 top-0 h-full w-[1px] rotate-12 bg-gradient-to-b from-transparent via-[var(--color-primary-300)] to-transparent opacity-30 dark:via-[var(--color-primary-700)] dark:opacity-20" />
-        <div className="absolute -end-10 top-0 h-full w-[1px] -rotate-12 bg-gradient-to-b from-transparent via-[var(--color-accent-300)] to-transparent opacity-20 dark:via-[var(--color-accent-700)] dark:opacity-15" />
+        <div className="absolute -end-10 top-0 h-full w-[1px] -rotate-12 bg-gradient-to-b from-transparent to-transparent opacity-20 dark:opacity-15" />
       </div>
 
       <Container>
@@ -59,7 +59,7 @@ export function ValuesGrid({ eyebrow, title, subtitle, items, values }: ValuesGr
                 </div>
 
                 {/* Hover accent line */}
-                <div className="origin-start absolute inset-x-6 top-0 h-0.5 scale-x-0 rounded-full bg-gradient-to-r from-[var(--color-primary-400)] to-[var(--color-accent-400)] transition-transform duration-300 group-hover:scale-x-100" />
+                <div className="origin-start absolute inset-x-6 top-0 h-0.5 scale-x-0 rounded-full bg-gradient-to-r from-[var(--color-primary-400)] to-[var(--color-secondary-400)] transition-transform duration-300 group-hover:scale-x-100" />
 
                 <h3 className="text-foreground mb-2 text-lg font-semibold">{dict.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{dict.description}</p>

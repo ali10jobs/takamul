@@ -71,12 +71,6 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Prevent flash of wrong theme — runs before React hydration */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})()`,
-          }}
-        />
         {/* JSON-LD Organization Schema */}
         <script
           type="application/ld+json"

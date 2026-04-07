@@ -57,7 +57,7 @@ export function CTASection({ title, subtitle, ctaText }: CTASectionProps) {
           {/* Decorative line */}
           <motion.div
             variants={fadeUp}
-            className="mx-auto my-6 h-1 w-20 rounded-full bg-gradient-to-r from-[var(--color-accent-400)] to-[var(--color-secondary-400)]"
+            className="mx-auto my-6 h-1 w-20 rounded-full bg-gradient-to-r from-[var(--color-primary-400)] to-[var(--color-secondary-400)]"
           />
 
           <motion.p variants={fadeUp} className="mb-10 text-lg text-white/70">
@@ -66,10 +66,13 @@ export function CTASection({ title, subtitle, ctaText }: CTASectionProps) {
 
           <motion.div variants={fadeUp}>
             <Link href={`/${locale}/contact`}>
-              <Button variant="accent" size="lg" className="group gap-2">
+              <Link
+                href="#"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 font-semibold text-[var(--color-primary-800)]"
+              >
                 {ctaText}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-              </Button>
+              </Link>
             </Link>
           </motion.div>
         </motion.div>
