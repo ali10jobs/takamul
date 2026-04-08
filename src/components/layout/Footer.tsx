@@ -19,7 +19,6 @@ interface FooterProps {
 export function Footer({ dictionary }: FooterProps) {
   const { locale } = useLocale();
   const year = new Date().getFullYear();
-  const dispatch = useAppDispatch();
   const theme = useAppSelector((s) => s.ui.theme);
 
   return (
@@ -33,6 +32,7 @@ export function Footer({ dictionary }: FooterProps) {
               <Image
                 src={theme === 'dark' ? '/images/takamul-dark.png' : '/images/takamul-light.png'}
                 alt="Takamul Smart Tech"
+                className="dark:opacity-50"
                 width={120}
                 height={40}
               />
