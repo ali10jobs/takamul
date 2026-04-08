@@ -7,6 +7,7 @@ import { Menu, Mail } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { useAppDispatch } from '@/store/hooks';
+import { useAppSelector } from '@/store/hooks';
 import { toggleMobileMenu } from '@/store/slices/uiSlice';
 import { Container } from '@/components/ui/Container';
 import { Navbar } from './Navbar';
@@ -23,6 +24,7 @@ export function Header({ dictionary }: HeaderProps) {
   const { locale } = useLocale();
   const { direction, isAtTop } = useScrollDirection();
   const dispatch = useAppDispatch();
+  const theme = useAppSelector((s) => s.ui.theme);
 
   return (
     <>
@@ -35,7 +37,12 @@ export function Header({ dictionary }: HeaderProps) {
         <Container className="flex h-14 items-center justify-between lg:h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="p-2">
-            <Image src="/images/takamul.png" alt="Takamul Logo" width={40} height={40} />
+            <Image
+              src={theme === 'dark' ? '/images/takamul-dark.png' : '/images/takamul-light.png'}
+              alt="Takamul Logo"
+              width={40}
+              height={40}
+            />
           </Link>
 
           {/* Desktop nav */}

@@ -6,6 +6,8 @@ import { useLocale } from '@/hooks/useLocale';
 import { mainNav } from '@/data/navigation';
 import { siteConfig } from '@/data/site-config';
 import { Container } from '@/components/ui/Container';
+import { useAppDispatch } from '@/store/hooks';
+import { useAppSelector } from '@/store/hooks';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import type { Dictionary } from '@/types/dictionary';
@@ -17,6 +19,8 @@ interface FooterProps {
 export function Footer({ dictionary }: FooterProps) {
   const { locale } = useLocale();
   const year = new Date().getFullYear();
+  const dispatch = useAppDispatch();
+  const theme = useAppSelector((s) => s.ui.theme);
 
   return (
     <footer className="border-border bg-muted/40 border-t">
@@ -26,7 +30,12 @@ export function Footer({ dictionary }: FooterProps) {
           <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="text-foreground text-lg font-bold">
               {/* <span className="text-[var(--color-primary-500)]">Takamul</span> Smart Tech */}
-              <Image src="/images/takamul.png" alt="Takamul Smart Tech" width={120} height={40} />
+              <Image
+                src={theme === 'dark' ? '/images/takamul-dark.png' : '/images/takamul-light.png'}
+                alt="Takamul Smart Tech"
+                width={120}
+                height={40}
+              />
             </Link>
             <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
               {dictionary.footer.description}
