@@ -97,7 +97,7 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body className="bg-background text-foreground min-h-full">
+      <body className="bg-background text-foreground min-h-full" suppressHydrationWarning>
         <StoreProvider>
           <ThemeProvider>
             {/* Skip link for accessibility */}
