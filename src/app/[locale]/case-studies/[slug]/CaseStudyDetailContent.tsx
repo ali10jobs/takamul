@@ -99,7 +99,7 @@ export function CaseStudyDetailContent({
           {/* CTA */}
           <motion.div variants={fadeUp} className="mt-12">
             <Link
-              className="rounded-full bg-[var(--color-primary-500)] px-6 py-4"
+              className="rounded-full bg-[var(--color-primary-500)] text-[var(--color-secondary-100)] px-6 py-4"
               href={`/${locale}/contact`}
             >
               {ctaText}
