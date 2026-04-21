@@ -61,7 +61,7 @@ export function MobileMenu({ dictionary }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: locale === 'ar' ? '-100%' : '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="bg-background fixed inset-y-0 end-0 z-50 flex h-screen w-72 flex-col shadow-2xl lg:hidden"
+            className="bg-background fixed end-0 top-0 z-50 flex h-[100dvh] w-72 flex-col shadow-2xl lg:hidden"
           >
             {/* Close button */}
             <div className="flex items-center justify-end p-4">
@@ -107,7 +107,7 @@ export function MobileMenu({ dictionary }: MobileMenuProps) {
             </nav>
 
             {/* Theme + Language at bottom */}
-            <div className="border-border flex items-center justify-between gap-2 border-t p-4">
+            <div className="border-border flex items-center justify-between gap-2 border-t p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
               <LanguageSwitcher
                 variant="default"
                 dictionary={dictionary.language}
